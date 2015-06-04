@@ -30,7 +30,7 @@ def show(response):
 		print colored(json_data["query"],"green"),
 		if json_data["basic"].has_key("phonetic"):
 			print colored(json_data["basic"]["phonetic"],"green")
-		print colored(json_data["basic"]["explains"],"yellow")
+		print colored(",".join(json_data["basic"]["explains"]),"yellow")
 		print ""
 		print colored("网络释义","blue")
 		for value in json_data["web"][0]["value"]:
